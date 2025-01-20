@@ -25,7 +25,9 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get('/api/:date?', function (req, res) {
-  const filter = (str) => {/^\d+$/.test(str)}
+  const filter = (str) => {
+    return /^\d+$/.test(str)
+  }
 
   let dateUTC, dateUNIX
   
